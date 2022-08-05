@@ -1,0 +1,19 @@
+'''
+Given an arr of length n.
+'''
+
+n=len(arr)
+eve=[]
+odd=[]
+if n==0 or n<=3:
+    print(0)
+else:
+    for i in range(n):
+        if i%2==0:
+            eve.append(arr[i])
+        else:
+            odd.append(arr[i])
+        eve.sort()
+        odd.sort()
+    s=eve[1]+odd[1]
+    print(s)
