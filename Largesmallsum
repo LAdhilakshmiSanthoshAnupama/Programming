@@ -1,0 +1,30 @@
+'''
+Given an 'arr' of size 'length'. You need t find and return the sum of second largest element from even position and second smallest element from odd position.
+All arr elements are unique.
+Return 0 if arr is empty and if len(arr) is 3 or less than 3.
+
+Input1: [3,2,7,1,5,4]
+Output1: 7
+
+Input2: [1,8,0,2,3,5,6]
+Output1: 8
+'''
+
+arr=[]
+n=int(input())
+for i in range(n):
+    arr.append(int(input()))
+eve=[]
+odd=[]
+if n==0 or n<=3:
+    print(0)
+else:
+    for i in range(n):
+        if i%2==0:
+            eve.append(arr[i])
+        else:
+            odd.append(arr[i])
+        eve.sort()
+        odd.sort()
+    s=eve[-2]+odd[1]
+    print(s)
